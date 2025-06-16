@@ -1,2 +1,6 @@
-// Placeholder for interactivity later
-console.log("Website loaded!");
+const menuIcon = document.getElementById('menuIcon');
+const navLinks = document.getElementById('navLinks');
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
