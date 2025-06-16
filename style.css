@@ -9,76 +9,102 @@ body {
 .hero {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* პატარა ეკრანზე წამოვა ქვემოთ */
+  gap: 2rem;
 }
 
 .highlight {
   color: #00ff99;
   font-weight: bold;
+  font-size: 1.5rem;
+  flex: 1 1 300px; /* მოქნილი, მინიმუმ 300px */
 }
 
 .photo-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 25%; /* მშობელზე */
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
+  flex-shrink: 0; /* არ დაიკუმშოს */
 }
 
 .profile-img {
-  width:260px;
-  height: 260px;
+  width: 86%; /* photo-container-ს 86% */
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 0px -30px; 
+  object-position: 0px -30px;
   border-radius: 50%;
   position: relative;
   z-index: 2;
+  height: auto;
 }
 
 .circle-animate {
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 93%; /* photo-container-ს 93% */
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border: 3px dashed #00ff99;
   border-radius: 50%;
   animation: rotate 40s linear infinite;
   z-index: 1;
 }
 
-/* ✅ Responsive adjustments for tablets */
+/* Responsive adjustments for tablets */
 @media (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+    justify-content: center;
+  }
+
   .photo-container {
-    width: 220px;
-    height: 220px;
+    width: 40%;
+    max-width: 220px;
   }
 
   .profile-img {
-    width: 190px;
-    height: 190px;
+    width: 90%;
+    max-width: 190px;
   }
 
   .circle-animate {
-    width: 210px;
-    height: 210px;
+    width: 95%;
+    max-width: 210px;
   }
 }
 
-/* ✅ Responsive adjustments for mobile devices */
+/* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
   .photo-container {
-    width: 180px;
-    height: 180px;
+    width: 60%;
+    max-width: 180px;
   }
 
   .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 90%;
+    max-width: 150px;
   }
 
   .circle-animate {
-    width: 170px;
-    height: 170px;
+    width: 95%;
+    max-width: 170px;
   }
 }
 
@@ -99,7 +125,7 @@ nav h1 {
   color: white;
   font-size: 24px;
   margin: 0;
-  order: 1; /* ახლა მარცხნივ */
+  order: 1;
 }
 
 nav ul {
@@ -108,7 +134,7 @@ nav ul {
   gap: 20px;
   padding: 0;
   margin: 0;
-  order: 2; /* ახლა მარჯვნივ */
+  order: 2;
 }
 
 nav ul li a {
@@ -140,4 +166,3 @@ nav ul li a:active {
 .hire-btn:hover {
   background-color: #45a049;
 }
-
