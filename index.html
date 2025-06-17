@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dimitri Otanadze - CV</title>
-  <!-- ფაილის დასაკავშირებელი -->
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome ბურგერის იკონისთვის -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
   <header>
@@ -15,10 +13,10 @@
       <h1>DIMITRI.</h1>
       <div class="nav-links" id="navLinks">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#" data-section="home">Home</a></li>
+          <li><a href="#" data-section="about">About</a></li>
+          <li><a href="#" data-section="projects">Projects</a></li>
+          <li><a href="#" data-section="contact">Contact</a></li>
         </ul>
       </div>
       <div class="menu-icon" id="menuIcon">
@@ -34,13 +32,18 @@
       <p class="desc">I excel at crafting elegant digital experiences...</p>
       <button class="cv-btn">Download CV ⬇️</button>
       <div class="social-icons">
-        <!-- აქ დაამატე სოციალურ ქსელების აიკონები -->
+        <!-- სოციალური ბმულები -->
       </div>
     </div>
     <div class="photo-container">
       <div class="circle-animate"></div>
       <img src="profilbild.jpeg" alt="Profile Picture" class="profile-img"/>
     </div>
+  </section>
+
+  <!-- აქ გამოჩნდება შიგთავსი ნავბარის შესაბამისად -->
+  <section class="content-section" id="dynamicContent">
+    <p>Click on navigation links to see content.</p>
   </section>
 
   <script src="script.js"></script>
