@@ -127,7 +127,7 @@ nav h1 {
   width: 260px; /* შეცვლილი — ახლოსაა ფოტოსთან */
   height: 260px;
   transform: translate(-50%, -50%);
-  animation: rotate 100s linear infinite;
+  animation: rotate 500s linear infinite;
   z-index: 1;
 }
 
