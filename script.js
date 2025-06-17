@@ -14,18 +14,28 @@ front-end apps, or data visualizations.`,
     contact: `Contact Dimitri Otanadze via email dimitriotanadze@gmail.com or phone 0163 3647768.`
   };
 
+  // მობილური მენიუს ელემენტები
+  const menuIcon = document.getElementById("menuIcon");
+  const navLinks = document.getElementById("navLinks");
+
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
   links.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
+
+      // კონტენტის დინამიური შეცვლა
       const section = this.getAttribute("data-section");
       content.innerHTML = `<p>${sectionTexts[section] || "Content not available."}</p>`;
-    });
-  });
 
-  // Mobile menu toggle
-  const menuIcon = document.getElementById("menuIcon");
-  const navLinks = document.getElementById("navLinks");
-  menuIcon.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+      // მობილური მენიუს დახურვა, თუ ღიაა
+      navLinks.classList.remove("active");
+
+      // აქ ვმართავთ აქტიურობის კლასს (მწვანე ფონით)
+      links.forEach(l => l.classList.remove("active-link"));
+      this.classList.add("active-link");
+    });
   });
 });

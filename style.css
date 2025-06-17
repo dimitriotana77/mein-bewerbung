@@ -1,4 +1,3 @@
-/* Reset */ 
 body, ul {
   margin: 0;
   padding: 0;
@@ -41,9 +40,11 @@ nav h1 {
   transition: color 0.3s, background-color 0.3s;
 }
 
-.nav-links ul li a:hover {
-  background-color: #4CAF50;
-  color: white;
+/* Hover + აქტიური სტილი */
+.nav-links ul li a:hover,
+.nav-links ul li a.active-link {
+  background-color: #00ff99;
+  color: black;
 }
 
 .menu-icon {
@@ -98,7 +99,7 @@ nav h1 {
   flex: 1 1 300px;
 }
 
-/* NEW circular orbit effect */
+/* PHOTO container */
 .photo-container {
   position: relative;
   width: 250px;
@@ -118,15 +119,15 @@ nav h1 {
   z-index: 2;
 }
 
-/* Updated orbit and orbiter */
+/* ORBITAL EFFECT */
 .orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 320px;
-  height: 320px;
+  width: 260px; /* შეცვლილი — ახლოსაა ფოტოსთან */
+  height: 260px;
   transform: translate(-50%, -50%);
-  animation: rotate 6s linear infinite;
+  animation: rotate 100s linear infinite;
   z-index: 1;
 }
 
@@ -136,6 +137,16 @@ nav h1 {
   border: 4px dashed #00ff99;
   border-radius: 50%;
   box-sizing: border-box;
+}
+
+/* KEYFRAMES for rotation */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 /* Responsive design */
@@ -152,12 +163,12 @@ nav h1 {
 
   .profile-img {
     width: 100%;
-    height: 100%;
+    max-width: 190px;
   }
 
   .orbit {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
 
   .orbiter {
@@ -180,27 +191,17 @@ nav h1 {
 
   .profile-img {
     width: 100%;
-    height: 100%;
+    max-width: 150px;
   }
 
   .orbit {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 
   .orbiter {
     width: 100%;
     height: 100%;
-  }
-}
-
-/* Updated keyframes */
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
