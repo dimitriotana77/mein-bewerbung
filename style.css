@@ -106,7 +106,7 @@ nav h1 {
   height: 250px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   flex-shrink: 0;
 }
 
