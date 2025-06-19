@@ -163,7 +163,7 @@ nav h1 {
 
   .profile-img {
     width: 100%;
-    max-width: 190px;
+    max-width: 100%;
   }
 
   .orbit {
@@ -191,7 +191,7 @@ nav h1 {
 
   .profile-img {
     width: 100%;
-    max-width: 150px;
+    max-width: 100px;
   }
 
   .orbit {
